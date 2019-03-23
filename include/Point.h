@@ -1,10 +1,3 @@
-/*
- * Point.h
- *
- *  Created on: Mar 23, 2019
- *      Author: bulkodaw
- */
-
 #ifndef POINT_H_
 #define POINT_H_
 
@@ -12,17 +5,19 @@ class Point
 {
 public:
 	Point() : x(0), y(0) {};
-	Point(double x, double y);
+	Point(double, double);
 	virtual ~Point();
 
 	/*Setter's*/
-	void setPointX(double x);
-	void setPointY(double y);
+	void setPointX(double);
+	void setPointY(double);
 	/*Geter's*/
 	double getPointX(void);
 	double getPointY(void);
 
 	void printPoint(void);
+	double distanceBetweenTwoPoints(Point b);
+	Point midPoint(Point b);
 
 private:
 	double x, y;
