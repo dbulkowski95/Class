@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../include/Point.h"
-#include "../include/Line.h"
+#include "Point.h"
+#include "Line.h"
 
 int main(void)
 {

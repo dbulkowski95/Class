@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "../include/Point.h"
+#include "Point.h"
 
 
 Point::Point(double x1, double y1)

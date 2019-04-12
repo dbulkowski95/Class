@@ -1,4 +1,4 @@
-#include "../include/Line.h"
+#include "Line.h"
 
 Line::Line(void) : lineSlope(0), lineIntercept(0)
 {
