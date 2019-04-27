@@ -1,3 +1,7 @@
+#ifndef DATE_H
+#define DATE_H
+#include <iostream>
+
 namespace Chrono
 {
     class Date
@@ -15,18 +19,21 @@ namespace Chrono
 		Sep,
 		Oct,
 		Nov,
-		Dec
+		Dec,
+		Number_of_months
 	    };
 	Date();
 	Date(int day, Month mon, int year);
-	
+
+	~Date();
+
 	//Mutuators
 	int get_day(void) const { return Day; }
 	Month get_month(void) const { return Mon; }
 	int get_year(void) const { return Year; }
 
 	//Accessors
-	void set_day(int day_setter);
+	void set_day(const int day_setter);
 	void set_month(Month mon_setter);
 	void set_year(int year_setter);
 
@@ -48,6 +55,7 @@ namespace Chrono
     bool operator==(const Date& d1, const Date& d2);
     bool operator!=(const Date& d1, const Date& d2);
 
-    ostream& operator<<(ostream& os, const Date& d);
-    istream& operator>>(istream& is, const Date& d); 
+    std::ostream& operator<<(std::ostream& os, const Date& d);
+    std::istream& operator>>(std::istream& is, Date& d1);
 } //End of Chrono namespace
+#endif /* DATE_H */
